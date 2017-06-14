@@ -1,0 +1,26 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "accountDS": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "demo",
+    "password": "",
+    "name": "accountDS",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "TwitterDS": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "TwitterDB",
+    "password": "",
+    "name": "TwitterDS",
+    "user": "",
+    "connector": "mongodb"
+  }
+}
