@@ -9,10 +9,10 @@ export class HTTPTestService {
 	constructor (private _http: Http) {}
 
 	getTweets(){
-		return this._http.get('http://localhost:3008/api/Tweets').map((response:Response) => response.json());
+		return this._http.get('http://146.83.216.216:3004/api/Tweets').map((response:Response) => response.json());
 	}
 
 	getStats(range: string){
-		return this._http.get('http://0.0.0.0:3008/api/tweets/tweetsStats?range=daily').map((response:Response) => response.json());
+		return this._http.get('http://146.83.216.216:3004/api/Tweets/stats?range=monthly').map((response:Response) => response.json());
 	}
 }
