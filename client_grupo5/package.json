@@ -1,16 +1,15 @@
 {
-  "name": "client_grupo5",
+  "name": "TallerBD2017_Client",
   "version": "1.0.0",
-  "description": "A simple starter Angular2 project",
+  "description": "An application developped during Taller de Base de Datos 2017 to learn integrating next generation SGBD con modern web applications",
   "scripts": {
     "build": "webpack --progress",
     "watch": "npm run build -- --watch",
-    "server": "webpack-dev-server --inline --progress --port 8009 --content-base src",
+    "server": "webpack-dev-server --inline --progress --port 8009 --content-base client/src",
     "start": "npm run server"
   },
   "contributors": [
-    "Rob Wormald <robwormald@gmail.com>",
-    "PatrickJS <github@gdi2290.com>"
+    "Matthieu Vernier <mvernier@inf.uach.cl>"
   ],
   "license": "MIT",
   "dependencies": {
@@ -26,15 +25,25 @@
     "@angular/router": "~3.2.1",
     "@angular/upgrade": "~2.2.1",
     "angular2-in-memory-web-api": "0.0.21",
+    "angular2-materialize": "^15.0.4",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "d3": "^3.5.17",
     "ie-shim": "^0.1.0",
-    "reflect-metadata": "^0.1.3",
+    "materialize-css": "^0.98.2",
+    "moment": "^2.18.1",
+    "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "~0.6.26"
   },
   "devDependencies": {
-    "@types/node": "^6.0.48",
+    "@types/core-js": "^0.9.34",
+    "@types/d3-array": "^1.0.5",
+    "@types/d3-axis": "^1.0.5",
+    "@types/d3-scale": "^1.0.4",
+    "@types/d3-selection": "^1.0.5",
+    "@types/d3-shape": "^1.0.5",
+    "@types/node": "^6.0.78",
     "angular2-router-loader": "^0.3.4",
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^2.2.4",
@@ -47,10 +56,7 @@
     "webpack-merge": "^0.15.0"
   },
   "keywords": [
-    "Angular2",
-    "angular2-seed",
-    "official angular 2 seed",
-    "official angular2 seed"
+    "Angular2"
   ],
   "repository": {
     "type": "git",

@@ -2,10 +2,12 @@ var webpack = require('webpack');
 var path = require('path');
 var webpackMerge = require('webpack-merge');
 
+const ProvidePlugin = require('webpack/lib/ProvidePlugin');
+
 // Webpack Config
 var webpackConfig = {
   entry: {
-    'main': './src/main.browser.ts',
+    'main': './client/src/main.browser.ts',
   },
 
   output: {
@@ -17,11 +19,18 @@ var webpackConfig = {
     new webpack.ContextReplacementPlugin(
       // The (\\|\/) piece accounts for path separators in *nix and Windows
       /angular(\\|\/)core(\\|\/)src(\\|\/)linker/,
-      path.resolve(__dirname, './src'),
+      path.resolve(__dirname, './client/src'),
       {
         // your Angular Async Route paths relative to this root directory
       }
     ),
+    new ProvidePlugin({
+	 $: "jquery",
+	 jQuery: "jquery",
+         "window.jQuery": "jquery",
+         "root.jQuery": "jquery",
+         Hammer: "hammerjs/hammer"
+      }),
   ],
 
   module: {
@@ -79,6 +88,5 @@ var defaultConfig = {
     setImmediate: false
   }
 };
-
 
 module.exports = webpackMerge(defaultConfig, webpackConfig);
